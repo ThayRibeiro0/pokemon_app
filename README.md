@@ -1,1 +1,1 @@
-# project1
+# pokemon_app
