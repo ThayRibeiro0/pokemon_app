@@ -1,0 +1,23 @@
+{
+  "name": "pokemon_app",
+  "version": "1.0.0",
+  "description": "PokéDex Explorer is an interactive web application that allows users to search for specific Pokémon, view their details, and save their favorite Pokémon for easy access. This project was created as part of a collaborative group effort to practice agile development and build a responsive front-end application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThayRibeiro0/pokemon_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThayRibeiro0/pokemon_app/issues"
+  },
+  "homepage": "https://github.com/ThayRibeiro0/pokemon_app#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
