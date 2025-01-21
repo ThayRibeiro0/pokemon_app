@@ -96,3 +96,4 @@ function clearSearch() {
   displayPokemons(allPokemons);
   notFoundMessage.style.display = "none";
 }
+s
