@@ -38,16 +38,19 @@ function displayPokemons(pokemon) {
     const listItem = document.createElement("div");
     listItem.className = "list-item";
     listItem.innerHTML = `
-        <div class="number-wrap">
-            <p class="caption-fonts">#${pokemonID}</p>
-        </div>
-        <div class="img-wrap">
-            <img src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg" alt="${pokemon.name}" />
-        </div>
-        <div class="name-wrap">
-            <p class="body3-fonts">#${pokemon.name}</p>
-        </div>
-    `;
+    <div class="number-wrap">
+        <p class="caption-fonts">#${pokemonID}</p>
+    </div>
+    <div class="img-wrap">
+        <img src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg" alt="${pokemon.name}" />
+    </div>
+    <div class="name-wrap">
+        <p class="body3-fonts">${pokemon.name}</p>
+    </div>
+    <button class="favorite-btn" data-id="${pokemonID}" data-name="${pokemon.name}" data-img="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg">
+        Add to Favorites
+    </button>
+`;
 
     listItem.addEventListener("click", async () => {
       const success = await fetchPokemonDataBeforeRedirect(pokemonID);
