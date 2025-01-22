@@ -38,16 +38,19 @@ function displayPokemons(pokemon) {
     const listItem = document.createElement("div");
     listItem.className = "list-item";
     listItem.innerHTML = `
-        <div class="number-wrap">
-            <p class="caption-fonts">#${pokemonID}</p>
-        </div>
-        <div class="img-wrap">
-            <img src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg" alt="${pokemon.name}" />
-        </div>
-        <div class="name-wrap">
-            <p class="body3-fonts">#${pokemon.name}</p>
-        </div>
-    `;
+    <div class="number-wrap">
+        <p class="caption-fonts">#${pokemonID}</p>
+    </div>
+    <div class="img-wrap">
+        <img src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg" alt="${pokemon.name}" />
+    </div>
+    <div class="name-wrap">
+        <p class="body3-fonts">${pokemon.name}</p>
+    </div>
+    <button class="favorite-btn" data-id="${pokemonID}" data-name="${pokemon.name}" data-img="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg">
+        Add to Favorites
+    </button>
+`;
 
     listItem.addEventListener("click", async () => {
       const success = await fetchPokemonDataBeforeRedirect(pokemonID);
@@ -55,7 +58,18 @@ function displayPokemons(pokemon) {
         window.location.href = `./detail.html?id=${pokemonID}`;
       }
     });
-
+    // John (1/21 Need to review)
+    const favoriteButton = listItem.querySelector(".favorite-btn");
+    favoriteButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent redirect on favorite button click
+      const pokemonData = {
+        id: pokemonID,
+        name: pokemon.name,
+        img: favoriteButton.dataset.img,
+      };
+      addToFavorites(pokemonData);
+    });
+    //-------------------
     listWrapper.appendChild(listItem);
   });
 }
@@ -96,3 +110,15 @@ function clearSearch() {
   displayPokemons(allPokemons);
   notFoundMessage.style.display = "none";
 }
+// John 91/21--------
+function addToFavorites(pokemon) {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  if (!favorites.some((fav) => fav.id === pokemon.id)) {
+    favorites.push(pokemon);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    alert(`${pokemon.name} added to favorites!`);
+  } else {
+    alert(`${pokemon.name} is already in favorites!`);
+  }
+}
+//------------
