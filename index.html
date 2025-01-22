@@ -4,21 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokedex</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./Pokemon.js" defer></script>
-    <script src="./search.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/Pokemon.js" defer></script>
+    <script src="./assets/js/favorites.js" defer></script>
+    <script src="./assets/js/search.js" defer></script>
   </head>
   <body>
     <header class="header home">
       <div class="container">
         <div class="logo-wrapper">
-          <img src="./assets/pokeball.svg" alt="pokeball" />
-          <h1>Pokedex</h1>
+          <img class="pokeball" src="./assets/png/pokeball.png" alt="pokeball" />
+          <h1>PokémonApp</h1>
         </div>
+      <nav>
+        <a href="favorites.html">Favorites</a>
+      </nav>
         <div class="search-wrapper">
           <div class="search-wrap">
             <img
-              src="./assets/search.svg"
+              src="./assets/png/search.png"
               alt="search icon"
               class="search-icon"
             />
@@ -29,7 +33,7 @@
               id="search-input"
             />
             <img
-              src="./assets/cross.svg"
+              src="./assets/png/close.png"
               alt="cross icon"
               class="search-close-icon"
               id="search-close-icon"
@@ -38,7 +42,7 @@
           <div class="sort-wrapper">
             <div class="sort-wrap">
               <img
-                src="./assets/sorting.svg"
+                src="./assets/png/sort.png"
                 alt="sorting"
                 class="sort-icon"
                 id="sort-icon"
