@@ -309,11 +309,11 @@ h1 {
 }
 
 .left-arrow {
-  left: 500px;
+  left: 10px;
 }
 
 .right-arrow {
-  right: 500px;
+  right: 10px;
 }
 
 .detail-card-detail-wrapper {
@@ -529,6 +529,8 @@ h1 {
   .list-item {
     padding: 5px;
   }
+
+
 }
 
 @media (max-width: 667px) {
