@@ -48,7 +48,7 @@ function displayPokemons(pokemon) {
         <p class="body3-fonts">${pokemon.name}</p>
     </div>
     <button class="favorite-btn" data-id="${pokemonID}" data-name="${pokemon.name}" data-img="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/${pokemonID}.svg">
-        Add to Favorites
+        ⭐️ Add to Favorites
     </button>
 `;
 
