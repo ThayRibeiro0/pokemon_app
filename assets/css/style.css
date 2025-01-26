@@ -207,9 +207,20 @@ body {
 }
 
 .list-item .name-wrap {
+  display: inline-block;
   font-size: var(--font-size);
   font-weight: bold;
   color: var(--third-color);
+}
+
+.name {
+  align-items: center;
+  position: abs;
+  margin-bottom: -1000px;
+  font-size: 3rem;
+  font-weight: bold;
+  display: inline-block;
+  animation: glowAnimation 1.5s ease-in-out infinite;
 }
 
 .favorite-btn {
@@ -464,6 +475,20 @@ body {
   background-color: var(--first-color);
   color: var(--third-color);
 }
+
+
+@keyframes glowAnimation {
+  0% {
+    text-shadow: 0 0 5px #f2e2e2, 0 0 10px #eee9e9;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff0000, 0 0 30px #ff7777;
+  }
+  100% {
+    text-shadow: 0 0 5px #d3c2c2, 0 0 10px #fcf7f7;
+  }
+}
+
 
 /* Media Queries */
 @media (max-width: 1650px) {
