@@ -171,9 +171,8 @@ function displayPokemonDetails(pokemon) {
   document.querySelector(".name-wrap .name").textContent =
     capitalizePokemonName;
 
-  document.querySelector(
-    ".pokemon-id-wrap .body2-fonts"
-  ).textContent = `#${String(id).padStart(3, "0")}`;
+  document.querySelector(".pokemon-id-wrap .body2-fonts").textContent =
+    `#${String(id).padStart(3, "0")}`;
 
   const imageElement = document.querySelector(".detail-img-wrapper img");
   imageElement.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;

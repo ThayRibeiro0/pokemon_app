@@ -110,15 +110,63 @@ function clearSearch() {
   displayPokemons(allPokemons);
   notFoundMessage.style.display = "none";
 }
-// John 91/21--------
+// // John 91/21--------
+// function addToFavorites(pokemon) {
+//   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+//   if (!favorites.some((fav) => fav.id === pokemon.id)) {
+//     favorites.push(pokemon);
+//     localStorage.setItem("favorites", JSON.stringify(favorites));
+//     alert(`${pokemon.name} added to favorites!`);
+//   } else {
+//     alert(`${pokemon.name} is already in favorites!`);
+//   }
+// }
+// //------------
+
+// Thays - Add to Favorites
 function addToFavorites(pokemon) {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   if (!favorites.some((fav) => fav.id === pokemon.id)) {
     favorites.push(pokemon);
     localStorage.setItem("favorites", JSON.stringify(favorites));
-    alert(`${pokemon.name} added to favorites!`);
+    showModal("Success 👏!", `${pokemon.name} ✅ added to favorites ⭐️!`);
   } else {
-    alert(`${pokemon.name} is already in favorites!`);
+    showModal(
+      "Warning! 😕",
+      `${pokemon.name} ❌ is already in favorites, do you wish remove it? 🖐️!`,
+      pokemon
+    );
   }
 }
+
+function showModal(title, message, pokemon = null) {
+  const modalTitle = document.querySelector("#exampleModalLabel");
+  const modalBody = document.querySelector(".modal-body");
+  const removeButton = document.querySelector("#removeBtn");
+
+  modalTitle.textContent = title;
+  modalBody.textContent = message;
+
+  if (pokemon) {
+    removeButton.style.display = "inline-block";
+    removeButton.onclick = () => removeFromFavorites(pokemon);
+  } else {
+    removeButton.style.display = "none";
+  }
+
+  $("#alertModal").modal("show");
+
+  document.querySelector("#closeBtn").onclick = function () {
+    $("#alertModal").modal("hide");
+  };
+}
+
+function removeFromFavorites(pokemon) {
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  favorites = favorites.filter((fav) => fav.id !== pokemon.id);
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+
+  showModal("Removed!", `${pokemon.name} has been removed from favorites!`);
+}
+
 //------------
