@@ -45,7 +45,11 @@ The app demonstrates the collaborative efforts of a development team leveraging 
 ### Screenshots
 
 <div>
-    <img src="./assets/screenshots/homepage.png" alt="homepage" width="300"/> <img src="./assets/screenshots/favorites.png" alt="favorites" width="300"/> <img src="./assets/screenshots/detail.png" alt="detail" width="300"/> 
+
+- <img src="./assets/screenshots/homepage.png" alt="homepage" width="300"/> 
+- <img src="./assets/screenshots/favorites.png" alt="favorites" width="300"/> 
+- <img src="./assets/screenshots/detail.png" alt="detail" width="300"/> 
+
 </div>
 
 ### Getting Started
