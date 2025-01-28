@@ -1,5 +1,6 @@
 # Pokedex
 
+
 Pokemon_App is an interactive web application that allows users to search for specific Pokémon, view their details, and save their favorite Pokémon for easy access. This project was created as part of a collaborative group effort to practice agile development and build a responsive front-end application.
 
 ### Table of Contents
