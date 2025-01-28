@@ -38,10 +38,9 @@ function displayFavorites() {
 // Function to remove a Pokémon from the favorites list
 function removeFromFavorites(id) {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  // Filter out the Pokémon to be removed
   const updatedFavorites = favorites.filter((pokemon) => pokemon.id !== id);
   localStorage.setItem("favorites", JSON.stringify(updatedFavorites)); // Update localStorage
-  window.location.reload(); // Reload the page to reflect changes
+  window.location.reload();
 }
 
 // Call the function to display favorites on page load

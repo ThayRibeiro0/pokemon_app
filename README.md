@@ -51,12 +51,14 @@ The app demonstrates the collaborative efforts of a development team leveraging 
 ### Getting Started
 
 Clone the repository:
-``` bash 
+
+```bash
 git clone https://github.com/yourusername/pokedex-explorer.git
 ```
 
 #### Navigate to the project directory:
-``` bash 
+
+```bash
 cd pokedex-explorer
 ```
 
@@ -72,9 +74,11 @@ Access the live application here.
 - Enhance accessibility with ARIA roles and improved keyboard navigation.
 
 ### Credits and References
+
 #### Team Members:
+
 - Andrew
-- John 
+- John
 - Thays
 
 #### PokéAPI: The open-source API powering the Pokémon data.
