@@ -22,7 +22,8 @@ function displayFavorites() {
     `;
 
     const removeButton = listItem.querySelector(".remove-btn");
-    removeButton.addEventListener("click", () => {
+    removeButton.addEventListener("click", (event) => {
+      event.stopPropagation(); // Prevent redirect on remove button click
       removeFromFavorites(pokemon.id); // Call the remove function
     });
 
