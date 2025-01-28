@@ -1,4 +1,5 @@
-# Pokemon_App
+# Pokedex
+
 
 Pokemon_App is an interactive web application that allows users to search for specific Pokémon, view their details, and save their favorite Pokémon for easy access. This project was created as part of a collaborative group effort to practice agile development and build a responsive front-end application.
 
@@ -44,7 +45,9 @@ The app demonstrates the collaborative efforts of a development team leveraging 
 
 ### Screenshots
 
-<img src="./assets/screenshots/Homepage.png" alt="Homepage" width="300"/> <img src="./assets/screenshots/Favorites.png" alt="Favorites Page" width="300"/> <img src="./assets/screenshots/Detail.png" alt="Pokémon Details Modal" width="300"/> 
+<div>
+    <img src="./assets/screenshots/Homepage.png" alt="Homepage" width="300"/> <img src="./assets/screenshots/Favorites.png" alt="Favorites Page" width="300"/> <img src="./assets/screenshots/Detail.png" alt="Pokémon-Details-Modal" width="300"/> 
+</div>
 
 ### Getting Started
 
