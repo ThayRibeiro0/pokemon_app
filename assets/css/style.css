@@ -523,7 +523,7 @@ body {
   .pokemon-list {
     grid-template-columns: repeat(2, 2fr);
     gap: 10px;
-    width: 60%;
+    width: 100%;
   }
 
   .list-wrapper {
