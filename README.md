@@ -1,6 +1,6 @@
-# PokémonApp
+# Pokemon_App
 
-PokéDex Explorer is an interactive web application that allows users to search for specific Pokémon, view their details, and save their favorite Pokémon for easy access. This project was created as part of a collaborative group effort to practice agile development and build a responsive front-end application.
+Pokemon_App is an interactive web application that allows users to search for specific Pokémon, view their details, and save their favorite Pokémon for easy access. This project was created as part of a collaborative group effort to practice agile development and build a responsive front-end application.
 
 ### Table of Contents
 
@@ -15,7 +15,7 @@ PokéDex Explorer is an interactive web application that allows users to search 
 
 ### About the Project
 
-PokéDex Explorer provides a seamless way to interact with Pokémon data. Users can:
+Pokemon_App provides a seamless way to interact with Pokémon data. Users can:
 
 Search for any Pokémon by name or ID.
 View detailed stats and information.
@@ -29,7 +29,7 @@ The app demonstrates the collaborative efforts of a development team leveraging 
 - Favorites Management: Save and view favorite Pokémon on a dedicated page with persistent storage.
 - Responsive Design: Accessible across devices of all screen sizes.
 - CSS Framework Integration: Styled using Bootstrap.
-- Interactive Modals: View Pokémon details in polished modals for a better user experience.
+- Interactive Modals: A Bootstrap modal confirms when a Pokémon is added to favorites.
 - Client-Side Storage: Favorites are stored using localStorage, ensuring persistence across sessions.
 
 ### Some of the Technologies Used
@@ -44,22 +44,20 @@ The app demonstrates the collaborative efforts of a development team leveraging 
 
 ### Screenshots
 
-- Homepage
-- Pokémon Details Modal
-- Favorites Page
+<img src="./assets/screenshots/Homepage.png" alt="Homepage" width="300"/> <img src="./assets/screenshots/Favorites.png" alt="Favorites Page" width="300"/> <img src="./assets/screenshots/Detail.png" alt="Pokémon Details Modal" width="300"/> 
 
 ### Getting Started
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/pokedex-explorer.git
+git clone https://github.com/ThayRibeiro0/pokemon_app
 ```
 
 #### Navigate to the project directory:
 
 ```bash
-cd pokedex-explorer
+cd pokemon_app
 ```
 
 Open index.html in your preferred web browser.
@@ -68,10 +66,12 @@ Access the live application here.
 
 ### Future Enhancements
 
-- Add a sorting feature for favorite Pokémon (e.g., by type, name, or ID).
-- Integrate additional Pokémon data, such as abilities and evolutions.
-- Include user authentication for personalized experiences.
-- Enhance accessibility with ARIA roles and improved keyboard navigation.
+- Update the cursor icon to a hand symbol to indicate that images are clickable.
+- Adjust the layout to ensure filter icons are evenly spaced for a cleaner design.
+- Enable the search icon to initiate a search, in addition to pressing the Enter key.
+- Create a dedicated section for team building under the Favorites page.
+- Capitalize the first letter of each Pokémon name for consistency.
+- Add a new feature to filter Pokémon by type for improved search functionality. 
 
 ### Credits and References
 
